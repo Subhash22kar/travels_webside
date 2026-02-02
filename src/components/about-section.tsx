@@ -21,15 +21,15 @@ export function AboutSection() {
                 </div>
                 <div className="space-y-6">
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-white">
-                        Redefining <span className="text-sky-500 italic">Travel</span>
+                        Redefining <span className="text-[#00f0ff] italic">Travel</span>
                     </h2>
                     <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
-                        At Preetesh Travels, we don't just book tickets; we craft experiences. From the snow-capped peaks of the Himalayas to the pristine beaches of Bali, our curated packages ensure every moment is a memory.
+                        At <span className="text-[#00f0ff] font-bold">Preetesh Travels</span>, we don't just book tickets; we craft experiences. From the snow-capped peaks of the Himalayas to the pristine beaches of Bali, our curated packages ensure every moment is a memory.
                     </p>
                     <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
-                        Join thousands of happy travelers who have discovered the world with our premium, hassle-free tour packages.
+                        Join thousands of happy travelers who have discovered the world with our premium, hassle-free tour packages. Let us handle the details while you live the adventure.
                     </p>
-                    <button className="px-8 py-4 bg-sky-500 text-white rounded-full font-bold shadow-lg hover:bg-sky-600 hover:scale-105 transition-all">
+                    <button className="px-8 py-4 bg-gradient-to-r from-[#00f0ff] to-[#7000ff] text-white rounded-full font-bold shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(112,0,255,0.6)] hover:scale-105 transition-all duration-300">
                         Learn More About Us
                     </button>
                 </div>

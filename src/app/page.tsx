@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/hero-section";
+import { StatsSection } from "@/components/stats-section";
 import { DestinationsGrid } from "@/components/destinations-grid";
 import { AboutSection } from "@/components/about-section";
 import { TestimonialsParallax } from "@/components/testimonials-parallax";
@@ -15,6 +16,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-500">
       <HeroSection />
+
+      <StatsSection />
 
       <AboutSection />
 

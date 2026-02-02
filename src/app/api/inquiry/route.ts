@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { appendToSheet } from "@/lib/google-sheets";
+import { db } from "@/lib/db";
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
@@ -7,11 +7,20 @@ export async function POST(req: Request) {
         const body = await req.json();
         const { name, phone, destination, budget, message } = body;
 
-        // Save to Google Sheets
-        const sheetSuccess = await appendToSheet({ name, phone, destination, budget, message });
-
-        if (!sheetSuccess) {
-            console.warn("Failed to save to Google Sheets (Check credentials)");
+        // Save to Neon Database (Postgres)
+        try {
+            await db.inquiry.create({
+                data: {
+                    name,
+                    phone,
+                    destination,
+                    budget,
+                    message,
+                },
+            });
+        } catch (dbError) {
+            console.error("Database Save Failed:", dbError);
+            // Optionally continue to send email even if DB fails
         }
 
         // Send Email Notification

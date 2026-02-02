@@ -80,9 +80,9 @@ export function DestinationsGrid() {
                 className="text-center mb-20"
             >
                 <h2 className="text-4xl md:text-6xl font-serif font-bold mb-4 text-gray-900 dark:text-white">
-                    Curated <span className="text-sky-400 italic">Escapes</span>
+                    Curated <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#7000ff] italic">Escapes</span>
                 </h2>
-                <div className="h-1 w-24 bg-sky-500 mx-auto rounded-full" />
+                <div className="h-1 w-24 bg-gradient-to-r from-[#00f0ff] to-[#7000ff] mx-auto rounded-full shadow-[0_0_15px_rgba(0,240,255,0.5)]" />
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -121,7 +121,7 @@ function DestinationCard({ destination, index }: { destination: Destination; ind
             </div>
 
             {/* Floating Tag */}
-            <div className="absolute top-6 left-6 bg-sky-500 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md shadow-lg transform -translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            <div className="absolute top-6 left-6 bg-gradient-to-r from-[#00f0ff] to-[#7000ff] text-white px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md shadow-[0_0_15px_rgba(0,240,255,0.4)] transform -translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                 {destination.tag}
             </div>
 
@@ -130,7 +130,7 @@ function DestinationCard({ destination, index }: { destination: Destination; ind
                 <h3 className="text-3xl font-serif font-bold text-white mb-2">{destination.name}</h3>
                 <p className="text-gray-300 mb-6 line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity">{destination.description}</p>
 
-                <button className="w-full py-4 bg-sky-500 text-white font-bold uppercase tracking-widest rounded-xl translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 hover:bg-white hover:text-sky-600">
+                <button className="w-full py-4 bg-white text-black font-bold uppercase tracking-widest rounded-xl translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 hover:bg-[#00f0ff] hover:text-black hover:shadow-[0_0_20px_rgba(0,240,255,0.5)]">
                     Explore Now
                 </button>
             </div>

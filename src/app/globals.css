@@ -4,13 +4,15 @@
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 
-  /* Custom Colors for Preetesh Travels */
-  --color-brand-blue: #0ea5e9;
-  /* Sky Blue */
-  --color-brand-dark: #0f172a;
-  /* Slate 900 */
-  --color-brand-light: #f8fafc;
-  /* Slate 50 */
+  /* Custom Colors for Preetesh Travels - Neon Electric Theme */
+  --color-brand-blue: #00f0ff;
+  /* Electric Cyan */
+  --color-brand-purple: #7000ff;
+  /* Neon Purple */
+  --color-brand-dark: #050510;
+  /* Deepest Void Blue */
+  --color-brand-light: #f0f9ff;
+  /* Ice White */
 
   @keyframes aurora {
     from {
@@ -46,7 +48,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-image: linear-gradient(to bottom right, #000000, #1a202c);
-    /* Subtle dark gradient */
+    background: #050510;
+    background-image: radial-gradient(circle at 50% 0%, #1a103c, #050510);
+    /* Deep Neon Gradient */
   }
 }
