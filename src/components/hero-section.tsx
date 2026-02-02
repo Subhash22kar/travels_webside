@@ -23,7 +23,7 @@ export function HeroSection() {
 
             {/* Glassmorphism Header */}
             <nav className="absolute top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-white/5 backdrop-blur-md border-b border-white/10">
-                <div className="text-2xl font-bold text-brand-gold tracking-widest">PT.</div>
+                <div className="text-2xl font-bold text-white tracking-widest border-2 border-white p-1 px-3">PT</div>
                 <div className="hidden md:flex gap-8 text-sm font-sans tracking-widest text-gray-300 uppercase">
                     <Link href="#destinations" className="hover:text-white transition-colors">Destinations</Link>
                     <Link href="#stories" className="hover:text-white transition-colors">Stories</Link>
@@ -40,10 +40,10 @@ export function HeroSection() {
                     transition={{ duration: 1.2, ease: "easeOut" }}
                     className="relative"
                 >
-                    <h1 className="text-[12vw] leading-none font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/50 drop-shadow-2xl mix-blend-overlay">
-                        PRITESH
+                    <h1 className="text-[8vw] leading-none font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/50 drop-shadow-2xl mix-blend-overlay">
+                        PREETESH
                     </h1>
-                    <h1 className="text-[12vw] leading-none font-bold text-transparent bg-clip-text bg-gradient-to-b from-brand-gold via-brand-gold to-yellow-600/50 drop-shadow-2xl -mt-[2vw]">
+                    <h1 className="text-[8vw] leading-none font-bold text-transparent bg-clip-text bg-gradient-to-b from-sky-400 via-sky-400 to-blue-600/50 drop-shadow-2xl -mt-[1vw]">
                         TRAVELS
                     </h1>
                 </motion.div>
@@ -65,9 +65,9 @@ export function HeroSection() {
                 >
                     <Link
                         href="#destinations"
-                        className="group relative inline-flex items-center gap-3 px-12 py-5 overflow-hidden rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-brand-gold hover:border-brand-gold transition-all duration-500"
+                        className="group relative inline-flex items-center gap-3 px-12 py-5 overflow-hidden rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-sky-500 hover:border-sky-500 transition-all duration-500"
                     >
-                        <span className="relative z-10 font-bold text-white group-hover:text-black tracking-widest text-sm uppercase">
+                        <span className="relative z-10 font-bold text-white group-hover:text-white tracking-widest text-sm uppercase">
                             Begin Your Journey
                         </span>
                         <div className="group-hover:translate-x-1 transition-transform duration-300">

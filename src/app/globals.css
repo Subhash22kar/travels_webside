@@ -4,9 +4,13 @@
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 
-  /* Custom Colors for Pritesh Travels */
-  --color-brand-gold: #D4Af37;
-  --color-brand-dark: #0a0a0a;
+  /* Custom Colors for Preetesh Travels */
+  --color-brand-blue: #0ea5e9;
+  /* Sky Blue */
+  --color-brand-dark: #0f172a;
+  /* Slate 900 */
+  --color-brand-light: #f8fafc;
+  /* Slate 50 */
 
   @keyframes aurora {
     from {

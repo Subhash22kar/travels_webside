@@ -75,7 +75,7 @@ export function DestinationsGrid() {
                     className="text-center mb-20"
                 >
                     <h2 className="text-4xl md:text-6xl font-serif font-bold mb-4">
-                        Curated <span className="text-brand-gold italic">Escapes</span>
+                        Curated <span className="text-sky-400 italic">Escapes</span>
                     </h2>
                     <div className="h-1 w-24 bg-brand-gold mx-auto rounded-full" />
                 </motion.div>
@@ -112,12 +112,12 @@ function DestinationCard({ destination, index }: { destination: Destination; ind
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
 
             {/* Floating Price Tag */}
-            <div className="absolute top-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-brand-gold font-bold shadow-lg transform group-hover:scale-110 transition-transform">
+            <div className="absolute top-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-white font-bold shadow-lg transform group-hover:scale-110 transition-transform">
                 {destination.price}
             </div>
 
             {/* Floating Tag */}
-            <div className="absolute top-6 left-6 bg-brand-gold/90 text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md shadow-lg transform -translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            <div className="absolute top-6 left-6 bg-sky-500 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md shadow-lg transform -translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                 {destination.tag}
             </div>
 
@@ -126,7 +126,7 @@ function DestinationCard({ destination, index }: { destination: Destination; ind
                 <h3 className="text-3xl font-serif font-bold text-white mb-2">{destination.name}</h3>
                 <p className="text-gray-300 mb-6 line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity">{destination.description}</p>
 
-                <button className="w-full py-4 bg-brand-gold text-black font-bold uppercase tracking-widest rounded-xl translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 hover:bg-white">
+                <button className="w-full py-4 bg-sky-500 text-white font-bold uppercase tracking-widest rounded-xl translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 hover:bg-white hover:text-sky-600">
                     Explore Now
                 </button>
             </div>

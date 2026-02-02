@@ -43,7 +43,7 @@ export function InquiryForm() {
                 className="w-full max-w-lg mx-auto p-8 rounded-2xl bg-neutral-800 border border-brand-gold/50 text-center"
             >
                 <div className="text-5xl mb-4">✨</div>
-                <h3 className="text-2xl font-bold text-brand-gold mb-2">Inquiry Received!</h3>
+                <h3 className="text-2xl font-bold text-sky-500 mb-2">Inquiry Received!</h3>
                 <p className="text-gray-300">We'll get back to you shortly to plan your dream trip.</p>
                 <button
                     onClick={() => setStatus("idle")}
@@ -63,7 +63,7 @@ export function InquiryForm() {
                     <input
                         type="text"
                         required
-                        className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all"
+                        className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all"
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -75,7 +75,7 @@ export function InquiryForm() {
                     <input
                         type="tel"
                         required
-                        className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all"
+                        className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all"
                         placeholder="+1 234 567 8900"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -88,7 +88,7 @@ export function InquiryForm() {
                         <input
                             type="text"
                             required
-                            className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all"
+                            className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all"
                             placeholder="Paris, Bali..."
                             value={formData.destination}
                             onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
@@ -97,7 +97,7 @@ export function InquiryForm() {
                     <div>
                         <label className="block text-sm font-medium text-gray-400 mb-1">Budget</label>
                         <select
-                            className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all appearance-none"
+                            className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all appearance-none"
                             value={formData.budget}
                             onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                         >
@@ -113,7 +113,7 @@ export function InquiryForm() {
                     <label className="block text-sm font-medium text-gray-400 mb-1">Special Request</label>
                     <textarea
                         rows={4}
-                        className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all"
+                        className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all"
                         placeholder="Tell us about your dream trip..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -125,7 +125,7 @@ export function InquiryForm() {
                     whileTap={{ scale: 0.98 }}
                     type="submit"
                     disabled={status === "submitting"}
-                    className="w-full bg-brand-gold text-black font-bold py-4 rounded-xl shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-sky-500 text-white font-bold py-4 rounded-xl shadow-[0_0_20px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_rgba(14,165,233,0.6)] hover:bg-white hover:text-sky-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     {status === "submitting" ? "Sending..." : "Plan My Trip"}
                 </motion.button>
