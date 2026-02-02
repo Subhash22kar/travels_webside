@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/hero-section";
 import { DestinationsGrid } from "@/components/destinations-grid";
+import { AboutSection } from "@/components/about-section";
 import { TestimonialsParallax } from "@/components/testimonials-parallax";
 import { InquiryForm } from "@/components/inquiry-form";
 import { WhatsAppButton } from "@/components/whatsapp-button";
@@ -8,8 +9,10 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-500">
       <HeroSection />
+
+      <AboutSection />
 
       <DestinationsGrid />
 

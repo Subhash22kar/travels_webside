@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function WhatsAppButton() {
     return (
         <motion.a
-            href="https://wa.me/1234567890" // Placesholder number
+            href="https://wa.me/918817777504" // Preetesh Travels Official
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}

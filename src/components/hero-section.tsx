@@ -25,8 +25,10 @@ export function HeroSection() {
             <nav className="absolute top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-white/5 backdrop-blur-md border-b border-white/10">
                 <div className="text-2xl font-bold text-white tracking-widest border-2 border-white p-1 px-3">PT</div>
                 <div className="hidden md:flex gap-8 text-sm font-sans tracking-widest text-gray-300 uppercase">
-                    <Link href="#destinations" className="hover:text-white transition-colors">Destinations</Link>
-                    <Link href="#stories" className="hover:text-white transition-colors">Stories</Link>
+                    <Link href="#" className="hover:text-white transition-colors">Home</Link>
+                    <Link href="#destinations" className="hover:text-white transition-colors">Tour Packages</Link>
+                    <Link href="#stories" className="hover:text-white transition-colors">About Us</Link>
+                    <Link href="#" className="hover:text-white transition-colors">Career</Link>
                     <Link href="#inquiry" className="hover:text-white transition-colors">Contact</Link>
                 </div>
             </nav>

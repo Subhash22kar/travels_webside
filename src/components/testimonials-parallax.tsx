@@ -36,16 +36,16 @@ export function TestimonialsParallax() {
     const y2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
     return (
-        <section id="stories" ref={containerRef} className="py-24 bg-black overflow-hidden relative">
-            <div className="absolute inset-0 bg-neutral-900/50 z-0" />
+        <section id="stories" ref={containerRef} className="py-24 bg-white dark:bg-black overflow-hidden relative transition-colors duration-500">
+            <div className="absolute inset-0 bg-sky-50/50 dark:bg-neutral-900/50 z-0" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
                 <motion.h2
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className="text-4xl md:text-6xl font-bold text-center mb-24 text-white"
+                    className="text-4xl md:text-6xl font-bold text-center mb-24 text-gray-900 dark:text-white"
                 >
-                    Traveler's <span className="text-brand-gold italic">Stories</span>
+                    Traveler's <span className="text-sky-500 italic">Stories</span>
                 </motion.h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -68,7 +68,7 @@ export function TestimonialsParallax() {
 
 function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
     return (
-        <div className="relative group rounded-2xl overflow-hidden shadow-2xl bg-neutral-800">
+        <div className="relative group rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-neutral-800 border border-gray-100 dark:border-neutral-700">
             <div className="h-80 w-full relative">
                 <Image
                     src={testimonial.image}
@@ -76,13 +76,13 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             </div>
 
             <div className="absolute bottom-0 left-0 w-full p-8">
-                <p className="text-lg md:text-xl text-gray-200 italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-lg md:text-xl text-white italic mb-4">"{testimonial.quote}"</p>
                 <div>
-                    <h4 className="text-brand-gold font-bold text-lg">{testimonial.name}</h4>
+                    <h4 className="text-sky-400 font-bold text-lg">{testimonial.name}</h4>
                     <span className="text-sm text-gray-400 uppercase tracking-widest">{testimonial.location}</span>
                 </div>
             </div>

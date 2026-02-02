@@ -65,7 +65,7 @@ const destinations: Destination[] = [
 
 export function DestinationsGrid() {
     return (
-        <section id="destinations" className="py-32 px-4 md:px-8 bg-neutral-900 dark:bg-black text-white transition-colors duration-500">
+        <section id="destinations" className="py-32 px-4 md:px-8 bg-sky-50 dark:bg-black text-black dark:text-white transition-colors duration-500">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
