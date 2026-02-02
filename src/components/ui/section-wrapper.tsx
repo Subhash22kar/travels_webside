@@ -23,10 +23,18 @@ export function SectionWrapper({
     return (
         <motion.section
             id={id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                    opacity: 1,
+                    transition: {
+                        staggerChildren: 0.2
+                    }
+                }
+            }}
             className={cn("relative py-24 px-4 md:px-8 overflow-hidden", className)}
         >
             {/* Background Image */}
@@ -45,9 +53,19 @@ export function SectionWrapper({
             )}
 
             {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto">
+            <motion.div
+                className="relative z-10 max-w-7xl mx-auto"
+                variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.8, ease: "easeOut" }
+                    }
+                }}
+            >
                 {children}
-            </div>
+            </motion.div>
         </motion.section>
     );
 }

@@ -9,6 +9,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 import { Footer } from "@/components/footer";
 import { ContactSection } from "@/components/contact-section";
+import { CareerSection } from "@/components/career-section";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <HeroSection />
 
       <AboutSection />
+
+      <CareerSection />
 
       <DestinationsGrid />
 

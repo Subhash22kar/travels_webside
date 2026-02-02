@@ -28,7 +28,7 @@ export function HeroSection() {
                     <Link href="#" className="hover:text-white transition-colors">Home</Link>
                     <Link href="#destinations" className="hover:text-white transition-colors">Tour Packages</Link>
                     <Link href="#about" className="hover:text-white transition-colors">About Us</Link>
-                    <Link href="#" className="hover:text-white transition-colors">Career</Link>
+                    <Link href="#career" className="hover:text-white transition-colors">Career</Link>
                     <Link href="#contact" className="hover:text-white transition-colors">Contact</Link>
                 </div>
             </nav>

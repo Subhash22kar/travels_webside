@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
     return (
@@ -17,9 +17,9 @@ export function Footer() {
                             Crafting unforgettable journeys across the globe. From luxury escapes to adventure tours, we make your travel dreams a reality.
                         </p>
                         <div className="flex gap-4">
-                            <SocialIcon icon={<Facebook size={20} />} href="#" />
-                            <SocialIcon icon={<Instagram size={20} />} href="#" />
-                            <SocialIcon icon={<Twitter size={20} />} href="#" />
+                            <SocialIcon icon={<Instagram size={20} />} href="https://www.instagram.com/preetesh_travels/" />
+                            <SocialIcon icon={<Facebook size={20} />} href="https://www.facebook.com/preetesh.gajbhiye" />
+                            <SocialIcon icon={<Linkedin size={20} />} href="https://www.linkedin.com/in/preetesh-gajbhiye-abb4a1387/" />
                         </div>
                     </div>
 
