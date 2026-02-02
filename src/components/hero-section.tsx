@@ -23,7 +23,14 @@ export function HeroSection() {
 
             {/* Glassmorphism Header */}
             <nav className="absolute top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-white/5 backdrop-blur-md border-b border-white/10">
-                <div className="text-2xl font-bold text-white tracking-widest border-2 border-white p-1 px-3">PT</div>
+                <div className="relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg group hover:scale-110 transition-transform duration-300">
+                    <Image
+                        src="/logo.jpg"
+                        alt="Preetesh Tour & Travels Logo"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
                 <div className="hidden md:flex gap-8 text-sm font-sans tracking-widest text-gray-300 uppercase">
                     <Link href="#" className="hover:text-white transition-colors">Home</Link>
                     <Link href="#destinations" className="hover:text-white transition-colors">Tour Packages</Link>

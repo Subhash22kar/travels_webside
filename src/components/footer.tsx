@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Twitter, Linkedin, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
@@ -10,9 +11,19 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand Column */}
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-serif font-bold tracking-wider">
-                            PREETESH <span className="text-sky-500">TRAVELS</span>
-                        </h3>
+                        <div className="flex items-center gap-4">
+                            <div className="relative h-16 w-16 rounded-full overflow-hidden border border-white/10 shrink-0">
+                                <Image
+                                    src="/logo.jpg"
+                                    alt="Preetesh Travels Logo"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <h3 className="text-2xl font-serif font-bold tracking-wider leading-tight">
+                                PREETESH <br /><span className="text-sky-500">TRAVELS</span>
+                            </h3>
+                        </div>
                         <p className="text-gray-400 leading-relaxed">
                             Crafting unforgettable journeys across the globe. From luxury escapes to adventure tours, we make your travel dreams a reality.
                         </p>
