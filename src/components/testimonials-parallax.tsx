@@ -25,6 +25,8 @@ const testimonials = [
     },
 ];
 
+import { SectionWrapper } from "./ui/section-wrapper";
+
 export function TestimonialsParallax() {
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -36,10 +38,12 @@ export function TestimonialsParallax() {
     const y2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
     return (
-        <section id="stories" ref={containerRef} className="py-24 bg-white dark:bg-black overflow-hidden relative transition-colors duration-500">
-            <div className="absolute inset-0 bg-sky-50/50 dark:bg-neutral-900/50 z-0" />
-
-            <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
+        <SectionWrapper
+            id="stories"
+            backgroundImage="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=2000"
+            overlayOpacity="bg-white/90 dark:bg-black/85"
+        >
+            <div ref={containerRef} className="relative z-10">
                 <motion.h2
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -62,7 +66,7 @@ export function TestimonialsParallax() {
                     </motion.div>
                 </div>
             </div>
-        </section>
+        </SectionWrapper>
     );
 }
 

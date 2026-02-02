@@ -27,9 +27,9 @@ export function HeroSection() {
                 <div className="hidden md:flex gap-8 text-sm font-sans tracking-widest text-gray-300 uppercase">
                     <Link href="#" className="hover:text-white transition-colors">Home</Link>
                     <Link href="#destinations" className="hover:text-white transition-colors">Tour Packages</Link>
-                    <Link href="#stories" className="hover:text-white transition-colors">About Us</Link>
+                    <Link href="#about" className="hover:text-white transition-colors">About Us</Link>
                     <Link href="#" className="hover:text-white transition-colors">Career</Link>
-                    <Link href="#inquiry" className="hover:text-white transition-colors">Contact</Link>
+                    <Link href="#contact" className="hover:text-white transition-colors">Contact</Link>
                 </div>
             </nav>
 

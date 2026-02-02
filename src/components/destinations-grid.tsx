@@ -63,30 +63,34 @@ const destinations: Destination[] = [
     },
 ];
 
+import { SectionWrapper } from "./ui/section-wrapper";
+
 export function DestinationsGrid() {
     return (
-        <section id="destinations" className="py-32 px-4 md:px-8 bg-sky-50 dark:bg-black text-black dark:text-white transition-colors duration-500">
-            <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="text-center mb-20"
-                >
-                    <h2 className="text-4xl md:text-6xl font-serif font-bold mb-4">
-                        Curated <span className="text-sky-400 italic">Escapes</span>
-                    </h2>
-                    <div className="h-1 w-24 bg-brand-gold mx-auto rounded-full" />
-                </motion.div>
+        <SectionWrapper
+            id="destinations"
+            backgroundImage="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=2000"
+            overlayOpacity="bg-sky-50/90 dark:bg-neutral-900/90"
+        >
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="text-center mb-20"
+            >
+                <h2 className="text-4xl md:text-6xl font-serif font-bold mb-4 text-gray-900 dark:text-white">
+                    Curated <span className="text-sky-400 italic">Escapes</span>
+                </h2>
+                <div className="h-1 w-24 bg-sky-500 mx-auto rounded-full" />
+            </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {destinations.map((dest, index) => (
-                        <DestinationCard key={dest.id} destination={dest} index={index} />
-                    ))}
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                {destinations.map((dest, index) => (
+                    <DestinationCard key={dest.id} destination={dest} index={index} />
+                ))}
             </div>
-        </section>
+        </SectionWrapper>
     );
 }
 

@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/db";
-import Inquiry from "@/models/Inquiry";
+import { appendToSheet } from "@/lib/google-sheets";
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
@@ -8,19 +7,11 @@ export async function POST(req: Request) {
         const body = await req.json();
         const { name, phone, destination, budget, message } = body;
 
-        // Connect to Database
-        await dbConnect();
+        // Save to Google Sheets
+        const sheetSuccess = await appendToSheet({ name, phone, destination, budget, message });
 
-        // Save to MongoDB (only if DB connection works)
-        try {
-            if (process.env.MONGODB_URI) {
-                await Inquiry.create({ name, phone, destination, budget, message });
-            } else {
-                console.log("Mocking DB Save (No MONGODB_URI):", body);
-            }
-        } catch (dbError) {
-            console.error("Database save failed:", dbError);
-            // Continue to send email or return success equivalent if DB is optional for now
+        if (!sheetSuccess) {
+            console.warn("Failed to save to Google Sheets (Check credentials)");
         }
 
         // Send Email Notification
