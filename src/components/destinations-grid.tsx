@@ -9,6 +9,7 @@ interface Destination {
     image: string;
     price: string;
     description: string;
+    tag: string;
 }
 
 const destinations: Destination[] = [
@@ -17,60 +18,69 @@ const destinations: Destination[] = [
         name: "Paris, France",
         image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=1000",
         price: "$1,200",
-        description: "Experience the city of love and lights.",
+        description: "Experience the timeless romance and art of the Eiffel Tower.",
+        tag: "Romance",
     },
     {
         id: 2,
         name: "Bali, Indonesia",
         image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1000",
         price: "$950",
-        description: "Tropical paradise with serene beaches.",
+        description: "Tropical paradise with serene beaches and lush jungles.",
+        tag: "Nature",
     },
     {
         id: 3,
         name: "Kyoto, Japan",
         image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=1000",
         price: "$1,500",
-        description: "Ancient temples and beautiful cherry blossoms.",
+        description: "Discover ancient temples among blooming cherry blossoms.",
+        tag: "Culture",
     },
     {
         id: 4,
         name: "Swiss Alps",
         image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&q=80&w=1000",
         price: "$2,100",
-        description: "Breathtaking mountain views and skiing.",
+        description: "Breathtaking mountain peaks perfect for skiing and hiking.",
+        tag: "Adventure",
     },
     {
         id: 5,
         name: "Santorini, Greece",
         image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=1000",
         price: "$1,800",
-        description: "White buildings and crystal clear waters.",
+        description: "Iconic white buildings overlooking the crystal clear Aegean sea.",
+        tag: "Relaxation",
     },
     {
         id: 6,
         name: "New York, USA",
         image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&q=80&w=1000",
         price: "$1,350",
-        description: "The city that never sleeps.",
+        description: "The city that never sleeps, full of energy and landmarks.",
+        tag: "Urban",
     },
 ];
 
 export function DestinationsGrid() {
     return (
-        <section id="destinations" className="py-24 px-4 md:px-8 bg-neutral-900 text-white">
+        <section id="destinations" className="py-32 px-4 md:px-8 bg-neutral-900 dark:bg-black text-white transition-colors duration-500">
             <div className="max-w-7xl mx-auto">
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-4xl md:text-5xl font-bold text-center mb-16"
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-20"
                 >
-                    Popular <span className="text-brand-gold italic">Destinations</span>
-                </motion.h2>
+                    <h2 className="text-4xl md:text-6xl font-serif font-bold mb-4">
+                        Curated <span className="text-brand-gold italic">Escapes</span>
+                    </h2>
+                    <div className="h-1 w-24 bg-brand-gold mx-auto rounded-full" />
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {destinations.map((dest, index) => (
                         <DestinationCard key={dest.id} destination={dest} index={index} />
                     ))}
@@ -83,33 +93,41 @@ export function DestinationsGrid() {
 function DestinationCard({ destination, index }: { destination: Destination; index: number }) {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ scale: 1.02, rotateY: 5, rotateX: 5 }}
-            style={{ perspective: 1000 }}
-            className="group relative bg-neutral-800 rounded-2xl overflow-hidden shadow-lg border border-neutral-700 hover:border-brand-gold/50 transition-all duration-500 ease-out"
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            whileHover={{ y: -15 }}
+            className="group relative h-[500px] w-full bg-neutral-800 rounded-3xl overflow-hidden shadow-2xl"
         >
-            <div className="relative h-72 w-full overflow-hidden">
-                <Image
-                    src={destination.image}
-                    alt={destination.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+            {/* Background Image */}
+            <Image
+                src={destination.image}
+                alt={destination.name}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
+            />
 
-                <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-brand-gold font-bold shadow-xl">
-                    {destination.price}
-                </div>
+            {/* Overlay Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+
+            {/* Floating Price Tag */}
+            <div className="absolute top-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-brand-gold font-bold shadow-lg transform group-hover:scale-110 transition-transform">
+                {destination.price}
             </div>
 
-            <div className="p-8 relative z-10 bg-neutral-800 transition-colors group-hover:bg-neutral-800/90">
-                <h3 className="text-2xl font-serif font-bold mb-2 text-white group-hover:text-brand-gold transition-colors">{destination.name}</h3>
-                <p className="text-gray-400 mb-6 line-clamp-2 font-light">{destination.description}</p>
-                <button className="w-full py-4 bg-white/5 hover:bg-brand-gold hover:text-black text-white rounded-xl font-semibold transition-all duration-300 border border-white/10 hover:border-brand-gold">
-                    Explore Destination
+            {/* Floating Tag */}
+            <div className="absolute top-6 left-6 bg-brand-gold/90 text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md shadow-lg transform -translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                {destination.tag}
+            </div>
+
+            {/* Content */}
+            <div className="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-3xl font-serif font-bold text-white mb-2">{destination.name}</h3>
+                <p className="text-gray-300 mb-6 line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity">{destination.description}</p>
+
+                <button className="w-full py-4 bg-brand-gold text-black font-bold uppercase tracking-widest rounded-xl translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 hover:bg-white">
+                    Explore Now
                 </button>
             </div>
         </motion.div>

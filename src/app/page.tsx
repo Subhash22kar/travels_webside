@@ -4,6 +4,7 @@ import { TestimonialsParallax } from "@/components/testimonials-parallax";
 import { InquiryForm } from "@/components/inquiry-form";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       </AuroraBackground>
 
       <WhatsAppButton />
+      <ThemeToggle />
     </main>
   );
 }

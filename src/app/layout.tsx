@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google"; // Premium fonts
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -28,9 +29,16 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased font-sans`}
       >
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );
