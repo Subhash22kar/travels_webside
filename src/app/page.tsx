@@ -3,6 +3,7 @@ import { DestinationsGrid } from "@/components/destinations-grid";
 import { TestimonialsParallax } from "@/components/testimonials-parallax";
 import { InquiryForm } from "@/components/inquiry-form";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export default function Home() {
   return (
@@ -15,13 +16,14 @@ export default function Home() {
       <TestimonialsParallax />
 
       {/* Placeholders for other sections */}
-      <section id="inquiry" className="min-h-screen py-24 px-4 md:px-8 bg-neutral-900 flex flex-col items-center justify-center">
-        <div className="w-full max-w-4xl">
+      {/* Placeholders for other sections */}
+      <AuroraBackground className="py-24">
+        <div id="inquiry" className="relative z-10 w-full max-w-4xl px-4 md:px-8 flex flex-col items-center justify-center">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">Start Your <span className="text-brand-gold italic">Journey</span></h2>
-          <p className="text-center text-gray-400 mb-12">Fill out the form below and let us craft your perfect itinerary.</p>
+          <p className="text-center text-gray-300 mb-12">Fill out the form below and let us craft your perfect itinerary.</p>
           <InquiryForm />
         </div>
-      </section>
+      </AuroraBackground>
 
       <WhatsAppButton />
     </main>

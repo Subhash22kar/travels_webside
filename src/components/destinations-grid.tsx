@@ -87,26 +87,29 @@ function DestinationCard({ destination, index }: { destination: Destination; ind
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ y: -10 }}
-            className="group relative bg-neutral-800 rounded-2xl overflow-hidden shadow-lg border border-neutral-700 hover:border-brand-gold/50 transition-colors"
+            whileHover={{ scale: 1.02, rotateY: 5, rotateX: 5 }}
+            style={{ perspective: 1000 }}
+            className="group relative bg-neutral-800 rounded-2xl overflow-hidden shadow-lg border border-neutral-700 hover:border-brand-gold/50 transition-all duration-500 ease-out"
         >
-            <div className="relative h-64 w-full overflow-hidden">
+            <div className="relative h-72 w-full overflow-hidden">
                 <Image
                     src={destination.image}
                     alt={destination.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full text-brand-gold font-bold">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+
+                <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-brand-gold font-bold shadow-xl">
                     {destination.price}
                 </div>
             </div>
 
-            <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
-                <p className="text-gray-400 mb-6 line-clamp-2">{destination.description}</p>
-                <button className="w-full py-3 bg-white/10 hover:bg-brand-gold hover:text-black text-white rounded-xl font-semibold transition-all duration-300">
-                    Explore
+            <div className="p-8 relative z-10 bg-neutral-800 transition-colors group-hover:bg-neutral-800/90">
+                <h3 className="text-2xl font-serif font-bold mb-2 text-white group-hover:text-brand-gold transition-colors">{destination.name}</h3>
+                <p className="text-gray-400 mb-6 line-clamp-2 font-light">{destination.description}</p>
+                <button className="w-full py-4 bg-white/5 hover:bg-brand-gold hover:text-black text-white rounded-xl font-semibold transition-all duration-300 border border-white/10 hover:border-brand-gold">
+                    Explore Destination
                 </button>
             </div>
         </motion.div>

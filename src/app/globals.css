@@ -7,7 +7,18 @@
   /* Custom Colors for Pritesh Travels */
   --color-brand-gold: #D4Af37;
   --color-brand-dark: #0a0a0a;
+
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
 }
+
 
 :root {
   --background: #ffffff;
