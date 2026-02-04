@@ -1,38 +1,30 @@
+import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
-import { StatsSection } from "@/components/stats-section";
 import { DestinationsGrid } from "@/components/destinations-grid";
 import { AboutSection } from "@/components/about-section";
-import { TestimonialsParallax } from "@/components/testimonials-parallax";
-import { InquiryForm } from "@/components/inquiry-form";
-import { WhatsAppButton } from "@/components/whatsapp-button";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { TestimonialsSection } from "@/components/testimonials-section";
+import { StickyActions } from "@/components/sticky-actions";
 
 import { Footer } from "@/components/footer";
 import { ContactSection } from "@/components/contact-section";
-import { CareerSection } from "@/components/career-section";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-500">
+      <Header />
       <HeroSection />
-
-      <StatsSection />
 
       <AboutSection />
 
-      <CareerSection />
-
       <DestinationsGrid />
 
-      <TestimonialsParallax />
+      <TestimonialsSection />
 
       <ContactSection />
 
       <Footer />
 
-      <WhatsAppButton />
-      <ThemeToggle />
+      <StickyActions />
     </main>
   );
 }

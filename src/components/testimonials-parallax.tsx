@@ -6,21 +6,21 @@ import Image from "next/image";
 
 const testimonials = [
     {
-        name: "John & Sarah",
-        location: "Maldives",
-        quote: "The trip of a lifetime! Pritesh Travels handled every detail flawlessly.",
+        name: "Rahul & Priya",
+        location: "Char Dham Yatra",
+        quote: "The arrangements for our parents were excellent. Hotels, darshan, everything was perfect. Jai Bholenath!",
         image: "https://images.unsplash.com/photo-1544025162-d76690b6094a?auto=format&fit=crop&q=80&w=1000",
     },
     {
-        name: "Michael Chen",
-        location: "Switzerland",
-        quote: "Skiing in the Alps was a dream come true. Highly recommended services.",
+        name: "Amit Sharma",
+        location: "Kashi Tour",
+        quote: "Best travel agency for spiritual tours. The guide was very knowledgeable about Kashi's history.",
         image: "https://images.unsplash.com/photo-1551009175-8a68da93d5f9?auto=format&fit=crop&q=80&w=1000",
     },
     {
-        name: "Emily Davis",
-        location: "Japan",
-        quote: "A perfect mix of adventure and relaxation. I can't wait for my next trip!",
+        name: "Suresh Gupta",
+        location: "Vaishno Devi",
+        quote: "We had a comfortable and divine journey. Preetesh Travels took care of everything.",
         image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1000",
     },
 ];
@@ -41,15 +41,15 @@ export function TestimonialsParallax() {
         <SectionWrapper
             id="stories"
             backgroundImage="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=2000"
-            overlayOpacity="bg-white/90 dark:bg-black/85"
+            overlayOpacity="bg-white/95 dark:bg-neutral-900/90"
         >
             <div ref={containerRef} className="relative z-10">
                 <motion.h2
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className="text-4xl md:text-6xl font-bold text-center mb-24 text-gray-900 dark:text-white"
+                    className="text-4xl md:text-5xl font-serif font-bold text-center mb-24 text-gray-900 dark:text-white"
                 >
-                    Traveler's <span className="text-sky-500 italic">Stories</span>
+                    Yatri <span className="text-brand-saffron italic">Stories</span>
                 </motion.h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -72,7 +72,7 @@ export function TestimonialsParallax() {
 
 function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
     return (
-        <div className="relative group rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-neutral-800 border border-gray-100 dark:border-neutral-700">
+        <div className="relative group rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700 hover:border-brand-saffron/30 transition-colors">
             <div className="h-80 w-full relative">
                 <Image
                     src={testimonial.image}
@@ -86,8 +86,8 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
             <div className="absolute bottom-0 left-0 w-full p-8">
                 <p className="text-lg md:text-xl text-white italic mb-4">"{testimonial.quote}"</p>
                 <div>
-                    <h4 className="text-sky-400 font-bold text-lg">{testimonial.name}</h4>
-                    <span className="text-sm text-gray-400 uppercase tracking-widest">{testimonial.location}</span>
+                    <h4 className="text-brand-saffron font-bold text-lg">{testimonial.name}</h4>
+                    <span className="text-sm text-gray-300 uppercase tracking-widest">{testimonial.location}</span>
                 </div>
             </div>
         </div>

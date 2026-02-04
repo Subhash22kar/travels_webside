@@ -9,50 +9,50 @@ export function ContactSection() {
         <SectionWrapper
             id="contact"
             backgroundImage="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=2000"
-            overlayOpacity="bg-sky-900/90 dark:bg-black/90"
+            overlayOpacity="bg-white/95 dark:bg-black/90"
         >
             <div className="grid lg:grid-cols-2 gap-16 items-start">
                 {/* Contact Information */}
-                <div className="space-y-10 text-white">
+                <div className="space-y-10 text-neutral-900 dark:text-white">
                     <div>
                         <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-                            Start Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#7000ff] italic">Journey</span>
+                            Start Your <span className="text-brand-saffron italic">Journey</span>
                         </h2>
-                        <p className="text-gray-300 text-lg leading-relaxed">
+                        <p className="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed">
                             Ready to explore the world? Reach out to us for customized tour packages, flight bookings, and unforgettable travel experiences.
                         </p>
                     </div>
 
                     <div className="space-y-8">
                         <ContactItem
-                            icon={<Phone className="w-6 h-6 text-[#00f0ff]" />}
+                            icon={<Phone className="w-6 h-6 text-brand-saffron" />}
                             title="Call Us"
                             content={
                                 <div className="flex flex-col gap-1">
-                                    <a href="tel:+918817777504" className="hover:text-[#00f0ff] transition-colors">+91 881-777-7504</a>
-                                    <a href="tel:+916263435093" className="hover:text-[#00f0ff] transition-colors">+91 626-343-5093</a>
+                                    <a href="tel:+918817777504" className="hover:text-brand-saffron transition-colors text-neutral-800 dark:text-neutral-200 font-medium">+91 881-777-7504</a>
+                                    <a href="tel:+916263435093" className="hover:text-brand-saffron transition-colors text-neutral-600 dark:text-neutral-400">+91 626-343-5093</a>
                                 </div>
                             }
                         />
 
                         <ContactItem
-                            icon={<Mail className="w-6 h-6 text-[#7000ff]" />}
+                            icon={<Mail className="w-6 h-6 text-brand-saffron" />}
                             title="Email Us"
                             content={
-                                <a href="mailto:preetesh.tour.travel969@gmail.com" className="hover:text-[#7000ff] transition-colors">
+                                <a href="mailto:preetesh.tour.travel969@gmail.com" className="hover:text-brand-saffron transition-colors text-neutral-600 dark:text-neutral-400 text-sm md:text-base">
                                     preetesh.tour.travel969@gmail.com
                                 </a>
                             }
                         />
 
                         <ContactItem
-                            icon={<MapPin className="w-6 h-6 text-[#00f0ff]" />}
+                            icon={<MapPin className="w-6 h-6 text-brand-saffron" />}
                             title="Visit Us"
                             content="Leela Tower, Raisen Rd, near Kwality Sweets, Sonagiri Square, BHEL, Sonagiri, Bhopal, Madhya Pradesh 462022"
                         />
 
                         <ContactItem
-                            icon={<Clock className="w-6 h-6 text-[#7000ff]" />}
+                            icon={<Clock className="w-6 h-6 text-brand-saffron" />}
                             title="Working Hours"
                             content="Mon - Sat: 10:00 AM - 8:00 PM"
                         />
@@ -60,8 +60,8 @@ export function ContactSection() {
                 </div>
 
                 {/* Inquiry Form */}
-                <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(0,240,255,0.2)] transition-shadow duration-500">
-                    <h3 className="text-2xl font-bold text-white mb-6">Send an Inquiry</h3>
+                <div className="bg-white/50 backdrop-blur-md p-8 rounded-2xl border border-neutral-200 shadow-xl">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-6 font-serif">Send an Inquiry</h3>
                     <InquiryForm />
                 </div>
             </div>
@@ -77,7 +77,7 @@ function ContactItem({ icon, title, content }: { icon: React.ReactNode, title: s
             </div>
             <div>
                 <h4 className="font-bold text-lg mb-1">{title}</h4>
-                <div className="text-gray-300">{content}</div>
+                <div className="text-neutral-600 dark:text-neutral-400">{content}</div>
             </div>
         </div>
     );

@@ -35,7 +35,7 @@ export function SectionWrapper({
                     }
                 }
             }}
-            className={cn("relative py-24 px-4 md:px-8 overflow-hidden", className)}
+            className={cn("relative py-24 px-4 md:px-8 overflow-hidden bg-white dark:bg-neutral-900 text-black dark:text-white", className)}
         >
             {/* Background Image */}
             {backgroundImage && (

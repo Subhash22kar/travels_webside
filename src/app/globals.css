@@ -4,52 +4,76 @@
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 
-  /* Custom Colors for Preetesh Travels - Neon Electric Theme */
-  --color-brand-blue: #00f0ff;
-  /* Electric Cyan */
-  --color-brand-purple: #7000ff;
-  /* Neon Purple */
-  --color-brand-dark: #050510;
-  /* Deepest Void Blue */
-  --color-brand-light: #f0f9ff;
-  /* Ice White */
+  /* Custom Colors for Preetesh Travels - Premium Tirth Theme */
+  --color-brand-blue: #003366;
+  /* Deep Royal Blue */
+  --color-brand-saffron: #FFCC00;
+  /* Bright Yellow/Gold */
+  --color-brand-gold: #FFD700;
+  /* Pure Gold */
+  --color-brand-dark: #0F172A;
+  /* Slate 900 */
+  --color-brand-light: #FFFFFF;
+  /* Pure White */
 
-  @keyframes aurora {
-    from {
-      background-position: 50% 50%, 50% 50%;
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
     }
 
-    to {
-      background-position: 350% 50%, 350% 50%;
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0px);
     }
   }
 }
 
-
+/* CSS Variables for Light/Dark Mode handled by next-themes via .dark class */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-brand-light);
+  --foreground: var(--color-brand-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
   background: var(--background);
-  background-image: linear-gradient(to bottom right, var(--background), var(--color-brand-light));
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #050510;
-    background-image: radial-gradient(circle at 50% 0%, #1a103c, #050510);
-    /* Deep Neon Gradient */
-  }
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-saffron);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e68a00;
+}
+
+/* Selection Color */
+::selection {
+  background: var(--color-brand-saffron);
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
 }
