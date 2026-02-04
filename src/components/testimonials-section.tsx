@@ -35,7 +35,7 @@ const testimonials = [
 export function TestimonialsSection() {
     return (
         <SectionWrapper id="testimonials" className="bg-neutral-50 dark:bg-neutral-900/50">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
                 <motion.span
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}

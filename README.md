@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Preetesh Travels Website 🌏
 
-## Getting Started
+A premium travel agency website built with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**.
 
-First, run the development server:
+## 🚀 How to Deploy on Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is optimized for deployment on [Vercel](https://vercel.com).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Step 1: Push to GitHub
+1. Create a new repository on GitHub.
+2. Push this code to the repository.
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin <your-repo-url>
+   git push -u origin main
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Step 2: Deploy to Vercel
+1. Go to [Vercel Dashboard](https://vercel.com/dashboard).
+2. Click **"Add New..."** -> **"Project"**.
+3. Import your GitHub repository.
+4. Vercel will auto-detect **Next.js**.
+5. Click **Deploy**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+That's it! Your site will be live in minutes.
 
-## Learn More
+## 🛠️ Local Development
 
-To learn more about Next.js, take a look at the following resources:
+To run the project locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open [http://localhost:3000](http://localhost:3000).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features
+- **Mobile Responsive**: Optimized for all devices.
+- **Dark Mode**: Toggle between light and dark themes.
+- **Animations**: Smooth transitions using Framer Motion.
+- **Contact Forms**: (UI Ready) - Connect to a backend service like EmailJS or Formspree.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Project Structure
+- `/src/components`: Reusable UI components (Header, Hero, etc.)
+- `/src/app`: Page routing and layout.
+- `/public`: Static assets (images, logos).

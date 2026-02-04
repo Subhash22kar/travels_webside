@@ -44,12 +44,12 @@ export function StatsSection() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section ref={ref} className="py-20 relative overflow-hidden bg-brand-cream/30 dark:bg-neutral-900">
+        <section ref={ref} className="py-12 md:py-20 relative overflow-hidden bg-brand-cream/30 dark:bg-neutral-900">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={stat.id}

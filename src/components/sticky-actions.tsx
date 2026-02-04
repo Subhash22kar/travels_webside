@@ -12,29 +12,29 @@ export function StickyActions() {
     const socialOptions = [
         {
             icon: <Phone size={20} />,
-            label: "+91 98765 43210",
-            href: "tel:+919876543210",
+            label: "+91 881-777-7504",
+            href: "tel:+918817777504",
             color: "bg-blue-600",
             delay: 0.1
         },
         {
             icon: <Mail size={20} />,
             label: "Email Us",
-            href: "mailto:info@preeteshtravels.com",
+            href: "mailto:preetesh.tour.travel969@gmail.com",
             color: "bg-red-500",
             delay: 0.2
         },
         {
             icon: <Facebook size={20} />,
             label: "Facebook",
-            href: "#",
+            href: "https://www.facebook.com/preetesh.gajbhiye",
             color: "bg-blue-800",
             delay: 0.3
         },
         {
             icon: <Instagram size={20} />,
             label: "Instagram",
-            href: "#",
+            href: "https://www.instagram.com/preetesh_travels/",
             color: "bg-pink-600",
             delay: 0.4
         }
@@ -44,7 +44,7 @@ export function StickyActions() {
         <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
             {/* WhatsApp Sticky Icon (Always Visible) */}
             <motion.a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/918817777504"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}

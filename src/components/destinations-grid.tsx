@@ -16,7 +16,7 @@ const destinations: Destination[] = [
     {
         id: "ajanta-ellora-caves",
         name: "Ajanta & Ellora Caves",
-        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2576&auto=format&fit=crop",
+        image: "/images/sacred-yatras/ajanta-ellora.png",
         price: "₹12,999",
         description: "Explore the magnificent rock-cut caves of Ajanta & Ellora.",
         tag: "Heritage"
@@ -24,7 +24,7 @@ const destinations: Destination[] = [
     {
         id: "bodh-gaya-pilgrimage",
         name: "Bodh Gaya Pilgrimage",
-        image: "https://images.unsplash.com/photo-1566835128038-16478950c406?q=80&w=2670&auto=format&fit=crop",
+        image: "/images/sacred-yatras/bodh-gaya.png",
         price: "₹8,999",
         description: "Visit the Mahabodhi Temple where the Buddha acceded to Enlightenment.",
         tag: "Enlightenment"
@@ -32,7 +32,7 @@ const destinations: Destination[] = [
     {
         id: "sarnath-varanasi",
         name: "Sarnath & Varanasi",
-        image: "https://images.unsplash.com/photo-1561584610-388f615392dd?q=80&w=2670&auto=format&fit=crop",
+        image: "/images/sacred-yatras/sarnath.png",
         price: "₹9,500",
         description: "The site of the First Sermon and the Dhamek Stupa.",
         tag: "First Sermon"
@@ -40,7 +40,7 @@ const destinations: Destination[] = [
     {
         id: "lumbini-nepal",
         name: "Lumbini Birthplace",
-        image: "https://images.unsplash.com/photo-1572978243170-148c31cb1584?q=80&w=2670&auto=format&fit=crop",
+        image: "/images/sacred-yatras/lumbini.png",
         price: "₹15,000",
         description: "A pilgrimage to the birthplace of Lord Buddha in Nepal.",
         tag: "Birthplace"
@@ -48,7 +48,7 @@ const destinations: Destination[] = [
     {
         id: "sanchi-stupa",
         name: "Sanchi & Satdhara",
-        image: "https://images.unsplash.com/photo-1623940173656-74fc21079313?q=80&w=2670&auto=format&fit=crop",
+        image: "/images/sacred-yatras/sanchi.png",
         price: "₹7,999",
         description: "Admire the Great Stupa and the serene Satdhara ruins.",
         tag: "Stupa"
@@ -56,7 +56,7 @@ const destinations: Destination[] = [
     {
         id: "international-buddhist",
         name: "Thailand, Vietnam & Cambodia",
-        image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=2639&auto=format&fit=crop",
+        image: "/images/sacred-yatras/southeast-asia.png",
         price: "₹45,999",
         description: "Experience the Golden Pagodas and Angkor Wat.",
         tag: "International"
@@ -81,18 +81,18 @@ export function DestinationsGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-20"
+                className="text-center mb-12 md:mb-20"
             >
                 <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-brand-dark dark:text-white">
                     Sacred <span className="text-brand-saffron italic">Yatras</span>
                 </h2>
                 <div className="h-1 w-24 bg-gradient-to-r from-brand-saffron to-brand-gold mx-auto rounded-full" />
-                <p className="mt-4 text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+                <p className="mt-4 text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto px-4">
                     Handpicked spiritual journeys designed for peace, comfort, and divine blessings.
                 </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
                 {destinations.map((dest, index) => (
                     <DestinationCard
                         key={dest.id}

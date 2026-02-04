@@ -13,21 +13,21 @@ export function FloatingContact() {
         {
             icon: <MessageCircle size={24} />,
             label: "WhatsApp",
-            href: "https://wa.me/919876543210",
+            href: "https://wa.me/918817777504",
             color: "bg-green-500",
             delay: 0.1
         },
         {
             icon: <Phone size={24} />,
             label: "Call Us",
-            href: "tel:+919876543210",
+            href: "tel:+918817777504",
             color: "bg-blue-600",
             delay: 0.2
         },
         {
             icon: <Mail size={24} />,
             label: "Email",
-            href: "mailto:info@preeteshtravels.com",
+            href: "mailto:preetesh.tour.travel969@gmail.com",
             color: "bg-red-500",
             delay: 0.3
         }

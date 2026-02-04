@@ -64,49 +64,61 @@ export function Header() {
 
             {/* Mobile Navigation Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-neutral-900 border-b border-brand-gold/20 shadow-xl py-6 px-4 flex flex-col gap-4 animate-in slide-in-from-top-5 fade-in duration-300 z-40">
-                    <Link
-                        href="/"
-                        className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-2 border-b border-neutral-100 dark:border-neutral-800"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        href="#destinations"
-                        className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-2 border-b border-neutral-100 dark:border-neutral-800"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Destinations
-                    </Link>
-                    <Link
-                        href="#destinations"
-                        className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-2 border-b border-neutral-100 dark:border-neutral-800"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Packages
-                    </Link>
-                    <Link
-                        href="#about"
-                        className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-2 border-b border-neutral-100 dark:border-neutral-800"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        About Us
-                    </Link>
-                    <Link
-                        href="#contact"
-                        className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-2 border-b border-neutral-100 dark:border-neutral-800"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Contact
-                    </Link>
-                    <Link
-                        href="#contact"
-                        className="mt-4 w-full py-3 bg-brand-saffron text-white font-bold rounded-lg text-center shadow-md active:scale-95 transition-transform"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Book Now
-                    </Link>
+                <div className="md:hidden fixed inset-0 top-[73px] z-40 bg-white dark:bg-neutral-900 border-t border-neutral-100 dark:border-neutral-800 animate-in slide-in-from-right-5 fade-in duration-300">
+                    <div className="flex flex-col h-[calc(100vh-73px)] p-6 overflow-y-auto">
+                        <div className="flex flex-col gap-2 mt-4">
+                            <Link
+                                href="/"
+                                className="text-xl font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-4 border-b border-neutral-100 dark:border-neutral-800"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Home
+                            </Link>
+                            <Link
+                                href="#destinations"
+                                className="text-xl font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-4 border-b border-neutral-100 dark:border-neutral-800"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Destinations
+                            </Link>
+                            <Link
+                                href="#destinations"
+                                className="text-xl font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-4 border-b border-neutral-100 dark:border-neutral-800"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Packages
+                            </Link>
+                            <Link
+                                href="#about"
+                                className="text-xl font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-4 border-b border-neutral-100 dark:border-neutral-800"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                About Us
+                            </Link>
+                            <Link
+                                href="#contact"
+                                className="text-xl font-medium text-neutral-800 dark:text-neutral-200 hover:text-brand-saffron py-4 border-b border-neutral-100 dark:border-neutral-800"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Contact
+                            </Link>
+                        </div>
+
+                        <div className="mt-auto mb-8 space-y-4">
+                            <Link
+                                href="#contact"
+                                className="w-full block py-4 bg-brand-saffron text-white font-bold text-lg rounded-xl text-center shadow-lg active:scale-95 transition-transform"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Book Your Yatra
+                            </Link>
+                            <div className="flex justify-center gap-6 text-neutral-400">
+                                <Facebook size={24} />
+                                <Instagram size={24} />
+                                <Twitter size={24} />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             )}
         </header>

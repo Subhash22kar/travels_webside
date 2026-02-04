@@ -119,13 +119,16 @@ export function PackageModal({ isOpen, onClose, destination }: PackageModalProps
                                 </div>
 
                                 <div className="mt-8 pt-6 border-t border-neutral-100 dark:border-neutral-800 flex gap-4">
-                                    <Link
+                                    <a
                                         href="#contact"
-                                        onClick={onClose}
-                                        className="flex-1 bg-brand-saffron hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/20 text-center transition-all hover:-translate-y-1 block"
+                                        onClick={(e) => {
+                                            // Allow smooth scroll to kick in before closing
+                                            setTimeout(onClose, 100);
+                                        }}
+                                        className="flex-1 bg-brand-saffron hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/20 text-center transition-all hover:-translate-y-1 block cursor-pointer"
                                     >
                                         Book Now
-                                    </Link>
+                                    </a>
                                     <button
                                         onClick={onClose}
                                         className="px-6 py-4 border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 font-bold rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"

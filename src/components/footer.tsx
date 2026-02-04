@@ -7,7 +7,7 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, WhatsAppIcon, YouTubeIcon } 
 
 export function Footer() {
     return (
-        <footer className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white pt-20 pb-10 border-t border-brand-gold/20 relative overflow-hidden transition-colors duration-300">
+        <footer className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white pt-12 md:pt-20 pb-10 border-t border-brand-gold/20 relative overflow-hidden transition-colors duration-300">
             {/* Decorative Background Pattern */}
             <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cubes.png')" }}></div>
 
